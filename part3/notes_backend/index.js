@@ -2,7 +2,7 @@
 const express = require('express')
 const cors = require('cors')
 const app = express()
-
+app.use(express.static('build'))
 app.use(express.json())
 app.use(cors())
 
@@ -28,7 +28,7 @@ let notes = [
 ]
 
 app.get('/', (req, res) => {
-    res.send('<h1>Hello World </h1>')
+    res.send('<h1>Hello Elham </h1>')
 })
 
 app.get('/api/notes', (req, res) => {
